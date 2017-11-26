@@ -10,10 +10,25 @@
     <link rel="stylesheet" href="css/colors.css">
     
     <link rel="manifest" href="manifest.json">
+
+    <script src="https://www.gstatic.com/firebasejs/4.6.1/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyDkWHDzO0Aj2oZ6oZSAKm2c_PoeTJ-lXY0",
+            authDomain: "pwa-notes-3392b.firebaseapp.com",
+            databaseURL: "https://pwa-notes-3392b.firebaseio.com",
+            projectId: "pwa-notes-3392b",
+            storageBucket: "pwa-notes-3392b.appspot.com",
+            messagingSenderId: "427673762453"
+        };
+        firebase.initializeApp(config);
+    </script>
     
     <script src="js/object.observe.polyfill.js"></script>
     <script src="js/array.observe.polyfill.js"></script>
     <script src="js/scripts.js"></script>
+    <script src="js/push.js"></script>
 
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -28,7 +43,7 @@
 </head>
 <body class="grey lighten-5 blue-grey">
     <header id="header" class="container grey lighten-4">
-        <h1>myNotes</h1>
+        <h1>Minhas Anotações</h1>
     </header>
     <div id="content" class="container grey lighten-4">
         <p>Adicione suas anotações a seguir</p>
